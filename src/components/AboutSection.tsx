@@ -16,7 +16,7 @@ const AboutSection = () => {
     {
       icon: <Code className="w-8 h-8" />,
       title: "Programming",
-      description: "Python, R, SQL, JavaScript, TensorFlow, PyTorch, Scikit-learn"
+      description: "Python, SQL, Java, TensorFlow, PyTorch, Scikit-learn"
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,

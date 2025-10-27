@@ -112,7 +112,7 @@ const CoursesSection = () => {
     {
       title: "Computer Networks",
       semester: "Semester 4",
-      grade: "In Progress",
+      grade: "A+",
       credits: 3,
      
     },

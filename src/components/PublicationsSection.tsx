@@ -190,9 +190,11 @@ const PublicationsSection = () => {
         </Tabs>
 
         <div className="text-center mt-12">
+          <a href="https://scholar.google.com/citations?user=sH-Q86IAAAAJ&hl=en" target='blank' rel="noopener noreferrer">
           <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
             View Complete Publication List
           </Button>
+          </a>
         </div>
       </div>
     </section>

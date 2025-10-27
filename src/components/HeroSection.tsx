@@ -37,7 +37,7 @@ const HeroSection = () => {
 
           {/* Main Content */}
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6">
-            Hi, I'm <span className="bg-gradient-to-r from-primary-glow to-tech bg-clip-text text-transparent">R SUKESH</span>
+            Hi, I'm <span className="relative bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent font-extrabold tracking-wider drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">R SUKESH</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-4">
