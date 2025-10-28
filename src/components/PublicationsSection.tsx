@@ -51,6 +51,14 @@ const PublicationsSection = () => {
       location: "Hosur, Tamil Nadu, India",
       status: "Accepted",
       type: "Oral Presentation"
+    },
+    {
+      title: "AI-Powered Predictive Model for Lung Disease Detection Using Chest X-Rays",
+      conference: "Institute of Electrical and Electronics Engineers (IEEE) in VSBCETC ",
+      year: "2025",
+      location: "Coimbatore, Tamil Nadu, India",
+      status: "Accepted",
+      type: "Oral Presentation"
     }
   ];
 
