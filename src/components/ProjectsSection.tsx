@@ -9,9 +9,9 @@ const ProjectsSection = () => {
       title: "AI-Powered Customer Sentiment Analysis",
       description: "Developed a machine learning model to analyze customer reviews and feedback using natural language processing. Achieved 92% accuracy in sentiment classification using BERT and transformer models.",
       technologies: ["Python", "BERT", "TensorFlow", "Pandas", "Streamlit"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
+      githubUrl: "https://github.com/sukesh-006/AI-Costumer-Sentiment-Analysis",
+      liveUrl: "https://aicussenti.netlify.app",
+      date: "2025",
       image: "🤖",
       status: "Completed"
     },
