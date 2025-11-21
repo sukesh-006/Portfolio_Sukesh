@@ -7,64 +7,70 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "AI-Powered Customer Sentiment Analysis",
-      description: "Developed a machine learning model to analyze customer reviews and feedback using natural language processing. Achieved 92% accuracy in sentiment classification using BERT and transformer models.",
+      description:
+        "Developed a machine learning model to analyze customer reviews and feedback using natural language processing. Achieved 92% accuracy in sentiment classification using BERT and transformer models.",
       technologies: ["Python", "BERT", "TensorFlow", "Pandas", "Streamlit"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
+      githubUrl: "https://github.com/sukesh-006/AI-Costumer-Sentiment-Analysis",
+      liveUrl: "https://aicussenti.netlify.app/",
+      date: "2025",
       image: "🤖",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Smart Traffic Management System",
-      description: "Created an intelligent traffic management system using computer vision and IoT sensors. The system optimizes traffic flow and reduces congestion by 30% in simulation environments.",
+      description:
+        "Created an intelligent traffic management system using computer vision and IoT sensors. The system optimizes traffic flow and reduces congestion by 30% in simulation environments.",
       technologies: ["OpenCV", "YOLOv5", "IoT", "Python", "MongoDB"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
+      githubUrl: "https://github.com/sukesh-006/Smart-Traffic-Management",
+      liveUrl: "https://traffic-ai-demo.com",
+      date: "2025",
       image: "🚦",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Predictive Healthcare Analytics Platform",
-      description: "Built a comprehensive healthcare analytics platform that predicts disease outbreaks and patient readmission rates using ensemble learning methods and real-time data processing.",
+      description:
+        "Built a comprehensive healthcare analytics platform that predicts disease outbreaks and patient readmission rates using ensemble learning methods and real-time data processing.",
       technologies: ["Scikit-learn", "Apache Kafka", "React", "PostgreSQL", "Docker"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/sukesh-006/Healthcare-Predictive-Analytics",
+      liveUrl: "https://healthcare-demo.com",
       date: "2023",
       image: "🏥",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Automated Code Review Assistant",
-      description: "Developing an AI assistant that automatically reviews code for bugs, security vulnerabilities, and performance issues using static analysis and machine learning techniques.",
+      description:
+        "Developing an AI assistant that automatically reviews code for bugs, security vulnerabilities, and performance issues using static analysis and machine learning techniques.",
       technologies: ["AST", "Machine Learning", "Python", "Git", "CI/CD"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
+      githubUrl: "https://github.com/sukesh-006/AI-Code-Review-Assistant",
+      liveUrl: "https://code-review-demo.com",
+      date: "2025",
       image: "💻",
-      status: "In Progress"
+      status: "In Progress",
     },
     {
       title: "Blockchain-based Supply Chain Tracker",
-      description: "Implemented a transparent supply chain tracking system using blockchain technology to ensure product authenticity and reduce counterfeiting in pharmaceutical industry.",
+      description:
+        "Implemented a transparent supply chain tracking system using blockchain technology to ensure product authenticity and reduce counterfeiting in pharmaceutical industry.",
       technologies: ["Solidity", "Web3.js", "Ethereum", "React", "Node.js"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2023",
+      githubUrl: "https://github.com/sukesh-006/Supply-Chain-Blockchain",
+      liveUrl: "https://supplychain-demo.com",
+      date: "2024",
       image: "⛓️",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Real-time Object Detection for Autonomous Vehicles",
-      description: "Created a real-time object detection system for autonomous vehicles using advanced computer vision techniques. Optimized for edge computing with 95% accuracy at 30 FPS.",
+      description:
+        "Created a real-time object detection system for autonomous vehicles using advanced computer vision techniques. Optimized for edge computing with 95% accuracy at 30 FPS.",
       technologies: ["PyTorch", "OpenCV", "CUDA", "TensorRT", "ROS"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/sukesh-006/Autonomous-Vehicle-Object-Detection",
+      liveUrl: "https://autonomous-detection-demo.com",
       date: "2024",
       image: "🚗",
-      status: "Completed"
-    }
+      status: "Completed",
+    },
   ];
 
   return (
@@ -80,12 +86,15 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group bg-gradient-card border-0 shadow-soft hover:shadow-strong transition-smooth transform hover:-translate-y-2">
+            <Card
+              key={index}
+              className="group bg-gradient-card border-0 shadow-soft hover:shadow-strong transition-smooth transform hover:-translate-y-2"
+            >
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="text-4xl mb-4">{project.image}</div>
-                  <Badge 
-                    variant={project.status === 'Completed' ? 'default' : 'secondary'}
+                  <Badge
+                    variant={project.status === "Completed" ? "default" : "secondary"}
                     className="ml-2"
                   >
                     {project.status}
@@ -99,11 +108,10 @@ const ProjectsSection = () => {
                   {project.date}
                 </div>
               </CardHeader>
+
               <CardContent>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-                
+                <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge key={techIndex} variant="outline" className="text-xs">
@@ -113,27 +121,30 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1 group/btn">
-                    <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex-1 group/btn">
-                    <ExternalLink size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                    Demo
-                  </Button>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <Button size="sm" variant="outline" className="w-full group/btn">
+                      <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
+                      Code
+                    </Button>
+                  </a>
+
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <Button size="sm" className="w-full group/btn">
+                      <ExternalLink size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
+                      Demo
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-      </div>  
 
         <div className="text-center mt-12">
-          <div className="text-center mt-12">
           <a href="https://github.com/sukesh-006" target="_blank" rel="noopener noreferrer">
-          <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
-            View All Projects on GitHub 
-          </Button>   
+            <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
+              View All Projects on GitHub
+            </Button>
           </a>
         </div>
       </div>
