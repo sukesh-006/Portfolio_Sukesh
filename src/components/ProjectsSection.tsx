@@ -113,14 +113,37 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1 group/btn">
-                    <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex-1 group/btn">
-                    <ExternalLink size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                    Demo
-                  </Button>
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={project.githubUrl === "#" ? "pointer-events-none opacity-50" : ""}
+                  >
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1 group/btn w-full"
+                      disabled={project.githubUrl === "#"}
+                    >
+                      <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
+                      Code
+                    </Button>
+                  </a>
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={project.liveUrl === "#" ? "pointer-events-none opacity-50" : ""}
+                  >
+                    <Button 
+                      size="sm" 
+                      className="flex-1 group/btn w-full"
+                      disabled={project.liveUrl === "#"}
+                    >
+                      <ExternalLink size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
+                      Demo
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
