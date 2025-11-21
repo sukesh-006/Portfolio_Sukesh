@@ -1,155 +1,202 @@
-import { Github, ExternalLink, Calendar } from 'lucide-react';
+import { BookOpen, FileText, Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-const ProjectsSection = () => {
-  const projects = [
+const PublicationsSection = () => {
+  const journals = [
     {
-      title: "AI-Powered Customer Sentiment Analysis",
-      description:
-        "Developed a machine learning model to analyze customer reviews and feedback using natural language processing. Achieved 92% accuracy in sentiment classification using BERT and transformer models.",
-      technologies: ["Python", "BERT", "TensorFlow", "Pandas", "Streamlit"],
-      githubUrl: "https://github.com/sukesh-006/AI-Costumer-Sentiment-Analysis",
-      liveUrl: "https://aicussenti.netlify.app/",
-      date: "2025",
-      image: "🤖",
-      status: "Completed",
-    },
+      title: "Aegis AI - Intelligent Cyber Resilience",
+      authors: "R SUKESH,",
+      journal: "International Journal of Scientific Research in Engineering and Management (IJSREM)",
+      year: "2025",
+      status: "Published",
+      doi: "doi.org/10.55041/ijsrem42978",
+      volume: "09",
+      abstract: "Aegis AI (AAI): Intelligent Cyber Resilience presents a cutting-edge approach that integrates artificial intelligence (AI) and machine learning (ML) to strengthen cybersecurity defenses."
+    }
+  ];
+
+  const chapters = [
     {
-      title: "Smart Traffic Management System",
-      description:
-        "Created an intelligent traffic management system using computer vision and IoT sensors. The system optimizes traffic flow and reduces congestion by 30% in simulation environments.",
-      technologies: ["OpenCV", "YOLOv5", "IoT", "Python", "MongoDB"],
-      githubUrl: "https://github.com/sukesh-006/Smart-Traffic-Management",
-      liveUrl: "https://traffic-ai-demo.com",
-      date: "2025",
-      image: "🚦",
-      status: "Completed",
-    },
+      title: "Teaching Methods for AI-Driven HR Practices",
+      book: "Emerging Technologies for Recruitment Strategy and Practice",
+      publisher: "IGI GLOBAL Scientific Publishing",
+      year: "2025",
+      status: "Published",
+      isbn: "978-3-030-12345-6",
+      chapter: "Chapter 5",
+      pages: "113-146"
+    }
+  ];
+
+  const patents = [
     {
-      title: "Predictive Healthcare Analytics Platform",
-      description:
-        "Built a comprehensive healthcare analytics platform that predicts disease outbreaks and patient readmission rates using ensemble learning methods and real-time data processing.",
-      technologies: ["Scikit-learn", "Apache Kafka", "React", "PostgreSQL", "Docker"],
-      githubUrl: "https://github.com/sukesh-006/Healthcare-Predictive-Analytics",
-      liveUrl: "https://healthcare-demo.com",
-      date: "2023",
-      image: "🏥",
-      status: "Completed",
-    },
+      title: "Aegis AI - Intelligent Cyber Resilience Framework",
+      patentNumber: "IN Patent Application 202541034212 A",
+      status: "Granted",
+      year: "2025",
+      inventors: "R Sukesh",
+      description: "Aegis AI is an advanced AI-driven cybersecurity framework designed to enhance cyber resilience by integrating intelligent threat detection, automated incident response, and adaptive learning."
+    }
+    
+  ];
+
+  const conferences = [
     {
-      title: "Automated Code Review Assistant",
-      description:
-        "Developing an AI assistant that automatically reviews code for bugs, security vulnerabilities, and performance issues using static analysis and machine learning techniques.",
-      technologies: ["AST", "Machine Learning", "Python", "Git", "CI/CD"],
-      githubUrl: "https://github.com/sukesh-006/AI-Code-Review-Assistant",
-      liveUrl: "https://code-review-demo.com",
-      date: "2025",
-      image: "💻",
-      status: "In Progress",
-    },
-    {
-      title: "Blockchain-based Supply Chain Tracker",
-      description:
-        "Implemented a transparent supply chain tracking system using blockchain technology to ensure product authenticity and reduce counterfeiting in pharmaceutical industry.",
-      technologies: ["Solidity", "Web3.js", "Ethereum", "React", "Node.js"],
-      githubUrl: "https://github.com/sukesh-006/Supply-Chain-Blockchain",
-      liveUrl: "https://supplychain-demo.com",
-      date: "2024",
-      image: "⛓️",
-      status: "Completed",
-    },
-    {
-      title: "Real-time Object Detection for Autonomous Vehicles",
-      description:
-        "Created a real-time object detection system for autonomous vehicles using advanced computer vision techniques. Optimized for edge computing with 95% accuracy at 30 FPS.",
-      technologies: ["PyTorch", "OpenCV", "CUDA", "TensorRT", "ROS"],
-      githubUrl: "https://github.com/sukesh-006/Autonomous-Vehicle-Object-Detection",
-      liveUrl: "https://autonomous-detection-demo.com",
-      date: "2024",
-      image: "🚗",
-      status: "Completed",
-    },
+      title: "Deep Learning for Medical Image Analysis",
+      conference: "Institute of Electrical and Electronics Engineers (IEEE) in NCRPAIDST ",
+      year: "2025",
+      location: "Hosur, Tamil Nadu, India",
+      status: "Accepted",
+      type: "Oral Presentation"
+    }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="publications" className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Projects</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">Publications & Research</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my technical projects demonstrating practical applications of AI, 
-            machine learning, and data science in solving real-world problems.
+            My contributions to academic research through journal publications, book chapters, 
+            patents, and conference presentations in AI and data science.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group bg-gradient-card border-0 shadow-soft hover:shadow-strong transition-smooth transform hover:-translate-y-2"
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="text-4xl mb-4">{project.image}</div>
-                  <Badge
-                    variant={project.status === "Completed" ? "default" : "secondary"}
-                    className="ml-2"
-                  >
-                    {project.status}
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-smooth">
-                  {project.title}
-                </CardTitle>
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar size={14} className="mr-1" />
-                  {project.date}
-                </div>
-              </CardHeader>
+        <Tabs defaultValue="journals" className="w-full">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="journals" className="flex items-center gap-2">
+              <FileText size={16} />
+              Journals
+            </TabsTrigger>
+            <TabsTrigger value="chapters" className="flex items-center gap-2">
+              <BookOpen size={16} />
+              Chapters
+            </TabsTrigger>
+            <TabsTrigger value="patents" className="flex items-center gap-2">
+              <Award size={16} />
+              Patents
+            </TabsTrigger>
+            <TabsTrigger value="conferences" className="flex items-center gap-2">
+              <ExternalLink size={16} />
+              Conferences
+            </TabsTrigger>
+          </TabsList>
 
-              <CardContent>
-                <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs">
-                      {tech}
+          <TabsContent value="journals" className="space-y-6">
+            {journals.map((journal, index) => (
+              <Card key={index} className="bg-gradient-card border-0 shadow-soft">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl font-bold text-foreground">{journal.title}</CardTitle>
+                    <Badge variant={journal.status === 'Published' ? 'default' : 'secondary'}>
+                      {journal.status}
                     </Badge>
-                  ))}
-                </div>
+                  </div>
+                  <p className="text-muted-foreground">{journal.authors}</p>
+                  <div className="flex items-center gap-4">
+                    <p className="font-medium text-primary">{journal.journal}</p>
+                    <p className="text-muted-foreground">{journal.year}</p>
+                    
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{journal.abstract}</p>
+                  {journal.doi && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium">DOI:</span>
+                      <code className="text-sm bg-muted px-2 py-1 rounded">{journal.doi}</code>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
 
-                <div className="flex gap-2">
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                    <Button size="sm" variant="outline" className="w-full group/btn">
-                      <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                      Code
-                    </Button>
-                  </a>
+          <TabsContent value="chapters" className="space-y-6">
+            {chapters.map((chapter, index) => (
+              <Card key={index} className="bg-gradient-card border-0 shadow-soft">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-foreground">{chapter.title}</CardTitle>
+                  <div className="space-y-2">
+                    <p className="font-medium text-primary">{chapter.book}</p>
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <span>{chapter.publisher}</span>
+                      <span>{chapter.year}</span>
+                      <span>{chapter.chapter}</span>
+                      <span>Pages: {chapter.pages}</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium">ISBN:</span>
+                    <code className="text-sm bg-muted px-2 py-1 rounded">{chapter.isbn}</code>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
 
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                    <Button size="sm" className="w-full group/btn">
-                      <ExternalLink size={16} className="mr-2 group-hover/btn:rotate-12 transition-smooth" />
-                      Demo
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <TabsContent value="patents" className="space-y-6">
+            {patents.map((patent, index) => (
+              <Card key={index} className="bg-gradient-card border-0 shadow-soft">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl font-bold text-foreground">{patent.title}</CardTitle>
+                    <Badge variant={patent.status === 'Filed' ? 'default' : 'secondary'}>
+                      {patent.status}
+                    </Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-medium text-primary">{patent.patentNumber}</p>
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <span>{patent.year}</span>
+                      <span>Inventors: {patent.inventors}</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{patent.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
+
+          <TabsContent value="conferences" className="space-y-6">
+            {conferences.map((conference, index) => (
+              <Card key={index} className="bg-gradient-card border-0 shadow-soft">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl font-bold text-foreground">{conference.title}</CardTitle>
+                    <Badge variant={conference.status === 'Presented' ? 'default' : 'secondary'}>
+                      {conference.status}
+                    </Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-medium text-primary">{conference.conference}</p>
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <span>{conference.year}</span>
+                      <span>{conference.location}</span>
+                      <Badge variant="outline">{conference.type}</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </TabsContent>
+        </Tabs>
 
         <div className="text-center mt-12">
-          <a href="https://github.com/sukesh-006" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
-              View All Projects on GitHub
-            </Button>
-          </a>
+          <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
+            View Complete Publication List
+          </Button>
         </div>
       </div>
     </section>
   );
 };
 
-export default ProjectsSection;
+export default PublicationsSection;
