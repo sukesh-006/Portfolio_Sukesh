@@ -130,10 +130,12 @@ const ProjectsSection = () => {
 
         <div className="text-center mt-12">
           <div className="text-center mt-12">
+          <a href="https://github.com/sukesh-006" target='blank' rel="noopener noreferrer">
         
           <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
             View All Projects on GitHub 
           </Button>
+          </a>
         </div>
       </div>
     </section>
