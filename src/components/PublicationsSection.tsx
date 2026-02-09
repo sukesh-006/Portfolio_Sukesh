@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Award, ExternalLink } from 'lucide-react';
+import { BookOpen, FileText, Award, ExternalLink, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -15,6 +15,16 @@ const PublicationsSection = () => {
       doi: "doi.org/10.55041/ijsrem42978",
       volume: "09",
       abstract: "Aegis AI (AAI): Intelligent Cyber Resilience presents a cutting-edge approach that integrates artificial intelligence (AI) and machine learning (ML) to strengthen cybersecurity defenses."
+    },
+    {
+      title: "A Temporal-Aware Dynamic Graph Neural Network for Learning Evolving Graph Representations",
+      authors: "R SUKESH,",
+      journal: "IRO Journal on Sustainable Wireless Systems (IROSWS)",
+      year: "2026",
+      status: "Published",
+      doi: "doi.org/10.36548/jsws.2025.4.002",
+      volume: "07",
+      abstract: "Many computer science studies, including communication networks, software dependency graphs, transaction systems and knowledge graphs produce dynamic graphs in which nodes and edges are continuously updated. Standard Graph Neural Networks (GNNs) are mainly designed for static network architectures and do not accurately capture temporal dynamics or structural changes.."
     }
   ];
 
@@ -28,6 +38,26 @@ const PublicationsSection = () => {
       isbn: "978-3-030-12345-6",
       chapter: "Chapter 5",
       pages: "113-146"
+    },
+    {
+      title: "Societal Impact of Autonomous Surgical Robotics Ethics, Accessibility, and the Future of Healthcare",
+      book: "Next-Generation Insights on Autonomous Surgical Robotics ",
+      publisher: "IGI GLOBAL Scientific Publishing",
+      year: "2026",
+      status: "On Progressing",
+      isbn: "-",
+      chapter: "-",
+      pages: "-"
+    },
+    {
+      title: "AI Techniques for Air, Water, and Soil Pollution Monitoring",
+      book: "AI and Emerging Technologies for Pollution Monitoring and Sustainable Environment",
+      publisher: "IGI GLOBAL Scientific Publishing",
+      year: "2026",
+      status: "On Progressing",
+      isbn: "-",
+      chapter: "-",
+      pages: "-"
     }
   ];
 
@@ -49,7 +79,7 @@ const PublicationsSection = () => {
       conference: "Institute of Electrical and Electronics Engineers (IEEE) in NCRPAIDST ",
       year: "2025",
       location: "Hosur, Tamil Nadu, India",
-      status: "Accepted",
+      status: "Presented",
       type: "Oral Presentation"
     },
     {
@@ -57,7 +87,7 @@ const PublicationsSection = () => {
       conference: "Institute of Electrical and Electronics Engineers (IEEE) in VSBCETC ",
       year: "2025",
       location: "Coimbatore, Tamil Nadu, India",
-      status: "Accepted",
+      status: "Presented",
       type: "Oral Presentation"
     }
   ];
@@ -128,21 +158,29 @@ const PublicationsSection = () => {
               <Card key={index} className="bg-gradient-card border-0 shadow-soft">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-foreground">{chapter.title}</CardTitle>
-                  <div className="space-y-2">
-                    <p className="font-medium text-primary">{chapter.book}</p>
+                      <div className="space-y-2">
+
+                    <Badge variant={chapter.status === 'Published' ? 'default' : 'secondary'}>
+                      {chapter.status}
+                    </Badge>
+              
+               
                     <div className="flex items-center gap-4 text-muted-foreground">
                       <span>{chapter.publisher}</span>
                       <span>{chapter.year}</span>
                       <span>{chapter.chapter}</span>
                       <span>Pages: {chapter.pages}</span>
                     </div>
+                    
                   </div>
+                 
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium">ISBN:</span>
                     <code className="text-sm bg-muted px-2 py-1 rounded">{chapter.isbn}</code>
                   </div>
+                  
                 </CardContent>
               </Card>
             ))}
@@ -154,7 +192,7 @@ const PublicationsSection = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-xl font-bold text-foreground">{patent.title}</CardTitle>
-                    <Badge variant={patent.status === 'Filed' ? 'default' : 'secondary'}>
+                    <Badge variant={patent.status === 'Granted' ? 'default' : 'secondary'}>
                       {patent.status}
                     </Badge>
                   </div>
