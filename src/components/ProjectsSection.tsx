@@ -16,13 +16,13 @@ const ProjectsSection = () => {
       status: "Completed"
     },
     {
-      title: "Smart Traffic Management System",
-      description: "Created an intelligent traffic management system using computer vision and IoT sensors. The system optimizes traffic flow and reduces congestion by 30% in simulation environments.",
-      technologies: ["OpenCV", "YOLOv5", "IoT", "Python", "MongoDB"],
+      title: "Citizen Scholar Eligibity Checker",
+      description: "Created an intelligent the Citizen Scheme Eligibility Checker, is a comprehensive digital tool designed to help individuals discover and access government welfare programs tailored to their specific socio-economic profiles. ",
+      technologies: ["Next JS", "React", "Tailwind CSS", "SQL", "MongoDB"],
       githubUrl: "#",
-      liveUrl: "#",
-      date: "2025",
-      image: "🚦",
+      liveUrl: "https://scholar-eligibitly.vercel.app/",
+      date: "2026",
+      image: "👍",
       status: "Completed"
     },
     {
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">Projects</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my technical projects demonstrating practical applications of AI, 
+            A showcase of my technical projects demonstrating practical applications of AI,
             machine learning, and data science in solving real-world problems.
           </p>
         </div>
@@ -84,7 +84,7 @@ const ProjectsSection = () => {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="text-4xl mb-4">{project.image}</div>
-                  <Badge 
+                  <Badge
                     variant={project.status === 'Completed' ? 'default' : 'secondary'}
                     className="ml-2"
                   >
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge key={techIndex} variant="outline" className="text-xs">
@@ -113,15 +113,15 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={project.githubUrl === "#" ? "pointer-events-none opacity-50" : ""}
                   >
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="flex-1 group/btn w-full"
                       disabled={project.githubUrl === "#"}
                     >
@@ -129,14 +129,14 @@ const ProjectsSection = () => {
                       Code
                     </Button>
                   </a>
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={project.liveUrl === "#" ? "pointer-events-none opacity-50" : ""}
                   >
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       className="flex-1 group/btn w-full"
                       disabled={project.liveUrl === "#"}
                     >
@@ -149,15 +149,15 @@ const ProjectsSection = () => {
             </Card>
           ))}
         </div>
-      </div>  
+      </div>
 
+      <div className="text-center mt-12">
         <div className="text-center mt-12">
-          <div className="text-center mt-12">
           <a href="https://github.com/sukesh-006" target='blank' rel="noopener noreferrer">
-        
-          <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
-            View All Projects on GitHub 
-          </Button>
+
+            <Button size="lg" variant="outline" className="transition-bounce hover:scale-105">
+              View All Projects on GitHub
+            </Button>
           </a>
         </div>
       </div>
