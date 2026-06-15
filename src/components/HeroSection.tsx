@@ -6,7 +6,7 @@ const HeroSection = () => {
   const downloadResume = () => {
     // Create a sample resume download
     const link = document.createElement('a');
-    link.href = "https://drive.google.com/file/d/12nUZVG_ytrPi3b2IBuIGYp1HezimmoXP/view?usp=sharing"; // You can replace this with actual resume URL
+    link.href = "https://drive.google.com/file/d/1vkzCCDKtaWk-qlzi9BP6nCXSvqwoTwBY/view?usp=sharing"; // You can replace this with actual resume URL
     link.download = 'R_SUKESH_Resume.pdf';
     link.click();
   };
