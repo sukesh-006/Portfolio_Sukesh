@@ -41,17 +41,21 @@ const AboutSection = () => {
             <h3 className="text-2xl font-semibold text-foreground mb-6">My Journey</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Currently pursuing my Bachelor's degree in AI & Data Science, I've been fascinated by the 
-                potential of artificial intelligence to solve real-world problems and transform industries.
+                My journey into technology began with a simple curiosity about how software and intelligent systems work. 
+                As I explored programming and problem-solving, I discovered my passion for Artificial Intelligence and Data Science—fields that have the power to transform industries and improve everyday life.                
+                Starting as a student eager to learn, I dedicated myself to mastering programming languages such as Python and Java while building a strong foundation in data analysis, machine learning, and web development. 
+                Every project became an opportunity to learn something new and push my limits.
               </p>
               <p>
-                Through my academic journey, I've gained hands-on experience in machine learning algorithms, 
-                data analysis techniques,web development and software development. I'm particularly interested in areas like 
-                computer vision, natural language processing, website development and predictive analytics.
+                Over time, I developed impactful projects, participated in technical competitions, earned certifications, and presented research papers.
+                One of the most significant milestones in my journey was securing a granted patent for Aegis AI, an intelligent cybersecurity framework designed to enhance digital resilience.
+                My research interests led me to publish journal articles and contribute to academic book chapters, allowing me to explore advanced topics in AI, cybersecurity, healthcare technology, and intelligent systems. 
+                These experiences strengthened my belief that technology should not only innovate but also solve meaningful problems.
               </p>
               <p>
-                I believe in continuous learning and staying updated with the latest technological advancements. 
-                My goal is to contribute meaningfully to the field of AI and make a positive impact through innovation.
+                Today, I continue my journey as an AI & Data Science student, striving to become a skilled engineer, researcher, and innovator. 
+                With every line of code, project, and challenge, I move one step closer to my vision of creating technology that makes a lasting impact on society.
+                "Every challenge is an opportunity to learn, every project is a step forward, and every innovation begins with curiosity." 🚀
               </p>
             </div>
           </div>

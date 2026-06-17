@@ -41,13 +41,13 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-4">
-            Pre-Final Year B.Tech AI & Data Science Student
+           Final Year B.Tech AI & Data Science Student
           </p>
           
           <p className="text-lg text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-            Passionate about artificial intelligence, machine learning, and data science. 
-            Building innovative solutions and contributing to cutting-edge research in AI.
-            Also skilled in web development and software engineering.
+            An aspiring Artificial Intelligence & Data Science Engineer passionate about building intelligent solutions that solve real-world problems. 
+            I specialize in Machine Learning, Data Analytics, and Full-Stack Web Development, with hands-on experience in AI-powered applications, NLP systems, and modern web technologies. 
+            I enjoy transforming complex data into meaningful insights and developing innovative products that create real impact.
           </p>
 
           {/* Action Buttons */}
@@ -78,7 +78,7 @@ const HeroSection = () => {
             <a href="https://www.linkedin.com/in/sukesh-r-68a786326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth transform hover:scale-110">
               <Linkedin size={24} />
             </a>
-            <a href="sukeshvsb@gmail.com" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth transform hover:scale-110">
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRwRrhSfhkGkNXxvKQMgdJpkRKZDtXDjBgSxNfcwfpbQJmgJLkWclcgnBXGwhJNzgVFGNlKl" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth transform hover:scale-110">
               <Mail size={24} />
             </a>
           </div>
