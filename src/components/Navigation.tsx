@@ -8,9 +8,11 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
     { name: 'Publications', href: '#publications' },
-    { name: 'Courses', href: '#courses' },
+    { name: 'Certifications', href: '#courses' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -21,11 +23,11 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-900 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
-            Portfolio
+          <div className="font-extrabold text-lg tracking-wider bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
+            R SUKESH
           </div>
 
           {/* Desktop Navigation */}
@@ -34,7 +36,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-smooth"
+                className="text-slate-300 hover:text-cyan-400 font-medium text-sm transition-smooth"
               >
                 {item.name}
               </button>
@@ -56,12 +58,12 @@ const Navigation = () => {
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-950 border-t border-slate-900">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-muted-foreground hover:text-primary transition-smooth"
+                  className="block w-full text-left px-3 py-2 text-slate-300 hover:text-cyan-400 font-medium text-sm transition-smooth"
                 >
                   {item.name}
                 </button>

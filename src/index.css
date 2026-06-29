@@ -118,6 +118,49 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Academic texture */
+  .bg-academic-grid {
+    background-color: #fcfbfa;
+    background-image: 
+      radial-gradient(#e5e2db 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(229, 226, 219, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px, 100% 40px;
+    background-position: 0 0, 0 10px;
+  }
+
+  /* Cyberpunk / Dark neural network grid */
+  .bg-dark-grid {
+    background-color: #0b0f19;
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Glowing effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+  }
+  .glow-violet {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+  }
+  .glow-text-cyan {
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+  }
+  
+  /* Font styles */
+  .font-serif-academic {
+    font-family: 'Lora', 'Times New Roman', serif;
+  }
+  .font-lato {
+    font-family: 'Lato', sans-serif;
   }
 }
