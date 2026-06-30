@@ -176,7 +176,7 @@ const HeroSection = () => {
 
         {/* Headings */}
         <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 border border-cyan-800/40 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-          Pre-Final Year AI & Data Science
+          Final Year AI & Data Science
         </span>
 
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
