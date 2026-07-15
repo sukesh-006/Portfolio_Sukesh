@@ -5,6 +5,42 @@ import { Button } from '@/components/ui/button';
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "AI Personal Finance Advisor",
+      description: "A full-stack web application for tracking income, expenses, savings goals, and budgets. Features AI-powered financial recommendations, predictive trend analysis, and a smart chatbot.",
+      technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/sukesh-006/AI_Finance-Maintainer",
+      liveUrl: "https://ai-finance-maintainer.vercel.app/",
+      date: "2026",
+      status: "Completed",
+      visual: (
+        <svg className="w-full h-full bg-slate-900 rounded-2xl border border-slate-800 p-4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          {/* Finance dashboard mockup */}
+          <rect x="15" y="15" width="40" height="20" rx="4" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="1" />
+          <text x="20" y="27" fill="#10b981" fontSize="6" fontWeight="bold">+ Income</text>
+
+          <rect x="65" y="15" width="40" height="20" rx="4" fill="rgba(244, 63, 94, 0.15)" stroke="#f43f5e" strokeWidth="1" />
+          <text x="70" y="27" fill="#f43f5e" fontSize="6" fontWeight="bold">- Expenses</text>
+
+          <rect x="115" y="15" width="60" height="20" rx="4" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" strokeWidth="1" />
+          <circle cx="125" cy="25" r="4" fill="#6366f1" />
+          <text x="135" y="27" fill="#6366f1" fontSize="6" fontWeight="bold">AI Insights</text>
+
+          {/* Trend Chart */}
+          <path d="M 15 90 L 40 70 L 70 85 L 100 40 L 130 60 L 175 25" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M 15 90 L 40 70 L 70 85 L 100 40 L 130 60 L 175 25 L 175 105 L 15 105 Z" fill="url(#financeGrad)" opacity="0.1" />
+          <defs>
+            <linearGradient id="financeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#06b6d4" />
+              <stop offset="100%" stopColor="transparent" />
+            </linearGradient>
+          </defs>
+
+          <circle cx="175" cy="25" r="3" fill="#06b6d4" />
+          <text x="150" y="20" fill="#cbd5e1" fontSize="6" fontWeight="bold">Savings Goal</text>
+        </svg>
+      )
+    },
+    {
       title: "AI-Powered Customer Sentiment Analysis",
       description: "Developed a deep learning model to analyze customer reviews and feedback using NLP. Achieved 92% classification accuracy using fine-tuned BERT and transformer pipelines. Deployed via a modern Streamlit interactive application.",
       technologies: ["Python", "BERT", "TensorFlow", "Pandas", "Streamlit"],

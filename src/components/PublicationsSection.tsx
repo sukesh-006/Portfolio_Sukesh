@@ -42,27 +42,8 @@ const PublicationsSection = () => {
       isbn: "978-3-030-12345-6",
       chapter: "Chapter 5",
       pages: "113-146"
-    },
-    {
-      title: "Societal Impact of Autonomous Surgical Robotics Ethics, Accessibility, and the Future of Healthcare",
-      book: "Next-Generation Insights on Autonomous Surgical Robotics",
-      publisher: "IGI GLOBAL Scientific Publishing",
-      year: "2026",
-      status: "In Progress",
-      isbn: "Pending Review",
-      chapter: "Chapter 12",
-      pages: "Forthcoming"
-    },
-    {
-      title: "AI Techniques for Air, Water, and Soil Pollution Monitoring",
-      book: "AI and Emerging Technologies for Pollution Monitoring and Sustainable Environment",
-      publisher: "IGI GLOBAL Scientific Publishing",
-      year: "2026",
-      status: "In Progress",
-      isbn: "Pending Review",
-      chapter: "Chapter 8",
-      pages: "Forthcoming"
     }
+    
   ];
 
   const patent = {

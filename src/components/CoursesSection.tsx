@@ -6,56 +6,55 @@ import { Progress } from '@/components/ui/progress';
 const CoursesSection = () => {
   const certifications = [
     {
-      title: "Machine Learning Specialization",
-      provider: "Stanford University (Coursera)",
-      instructor: "Andrew Ng",
-      completion: "2024",
-      grade: "98%",
-      skills: ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "Deep Learning"],
-      credentialUrl: "https://coursera.org/verify/ML-SPECIAL",
+      title: "Introduction to Artificial Intelligence",
+      provider: "Simplilearn SkillUp",
+      instructor: "Signed by: Krishna Kumar, CEO",
+      completion: "15th Oct 2024",
+      grade: "ID: 7458088",
+      skills: ["Artificial Intelligence"],
+      credentialUrl: "#",
       logo: (
-        <svg className="w-8 h-8 text-red-700" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-8 h-8 text-cyan-500" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2L1 21h22L12 2zm0 4l7.5 13h-15L12 6z"/>
         </svg>
       )
     },
     {
-      title: "Deep Learning Specialization",
-      provider: "DeepLearning.AI (Coursera)",
-      instructor: "Andrew Ng",
-      completion: "2024",
-      grade: "96%",
-      skills: ["CNN", "RNN", "LSTM", "GANs", "Transformers"],
-      credentialUrl: "https://coursera.org/verify/DL-SPECIAL",
+      title: "ChatGPT for Everyone",
+      provider: "GUVI / HCL – Google for Education Partner",
+      instructor: "Signed by: M. Arunprakash, Founder & CEO",
+      completion: "29th July 2025",
+      grade: "ID: 358r4h179S66pU7u76",
+      skills: ["ChatGPT", "Generative AI"],
+      credentialUrl: "#",
       logo: (
-        <svg className="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12h8" stroke="white" strokeWidth="2"/>
+        <svg className="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
         </svg>
       )
     },
     {
-      title: "AWS Certified Machine Learning - Specialty",
-      provider: "Amazon Web Services",
-      instructor: "AWS Training",
-      completion: "2024",
-      grade: "Pass",
-      skills: ["AWS SageMaker", "AWS ML Services", "MLOps", "Model Deployment"],
-      credentialUrl: "https://aws.amazon.com/verification",
+      title: "ServiceNow Virtual Internship Program",
+      provider: "ServiceNow University + AICTE + SmartBridge",
+      instructor: "ServiceNow",
+      completion: "14th April 2026",
+      grade: "ID: SNU2013610",
+      skills: ["Agentic AI", "ServiceNow Administration", "Flows", "ATF", "Reports", "CSA Preparation"],
+      credentialUrl: "#",
       logo: (
-        <svg className="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-8 h-8 text-teal-500" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
         </svg>
       )
     },
     {
-      title: "Google Data Analytics Professional Certificate",
-      provider: "Google (Coursera)",
-      instructor: "Google Career Certificates",
-      completion: "2023",
-      grade: "95%",
-      skills: ["SQL", "Tableau", "R", "Data Visualization", "Statistics"],
-      credentialUrl: "https://coursera.org/verify/GOOGLE-DATA",
+      title: "Micro-Certification – Welcome to ServiceNow",
+      provider: "ServiceNow",
+      instructor: "Signed by: Jayney Howson, SVP",
+      completion: "14th March 2026",
+      grade: "Verified",
+      skills: ["ServiceNow Essentials"],
+      credentialUrl: "#",
       logo: (
         <svg className="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.578-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 2.102 15.466 1 12.24 1c-6.075 0-11 4.925-11 11s4.925 11 11 11c6.34 0 10.55-4.437 10.55-10.714 0-.726-.075-1.285-.165-1.7H12.24z"/>
@@ -63,30 +62,16 @@ const CoursesSection = () => {
       )
     },
     {
-      title: "Web Development",
-      provider: "Corizo",
-      instructor: "Corizo Training Team",
-      completion: "2024",
-      grade: "Pass",
-      skills: ["Front end", "Back end", "Version Control", "Database management", "Deployment"],
+      title: "PowerBI Workshop",
+      provider: "OfficeMaster",
+      instructor: "OfficeMaster",
+      completion: "13th July 2025",
+      grade: "Verified",
+      skills: ["Power BI", "AI-powered Dashboards"],
       credentialUrl: "#",
       logo: (
-        <svg className="w-8 h-8 text-teal-600" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Microsoft Azure AI Fundamentals",
-      provider: "Microsoft",
-      instructor: "Microsoft Press",
-      completion: "2023",
-      grade: "Pass",
-      skills: ["Azure AI", "Cognitive Services", "Machine Learning", "Bot Framework"],
-      credentialUrl: "#",
-      logo: (
-        <svg className="w-8 h-8 text-sky-600" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/>
         </svg>
       )
     }
@@ -94,18 +79,11 @@ const CoursesSection = () => {
 
   const ongoingCourses = [
     {
-      title: "Prompt Engineering for GenAI",
-      provider: "Internshala",
-      progress: 75,
-      expectedCompletion: "December 2025",
-      skills: ["LLM Orchestration", "Critical Prompting", "NLP Systems", "Safety Filters"]
-    },
-    {
-      title: "Core Java with AI Integration",
-      provider: "W3Schools Academy",
-      progress: 60,
-      expectedCompletion: "January 2026",
-      skills: ["OOPS Fundamentals", "Multi-Threading", "Exception Logic", "AI API Connectors"]
+      title: "Projects & Research using Hugging Face Models",
+      provider: "Independent Research",
+      progress: 40,
+      expectedCompletion: "August 2027",
+      skills: ["Hugging Face", "LLMs", "AI Research", "Machine Learning"]
     }
   ];
 
