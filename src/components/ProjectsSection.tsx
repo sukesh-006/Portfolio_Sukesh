@@ -5,6 +5,33 @@ import { Button } from '@/components/ui/button';
 const ProjectsSection = () => {
   const projects = [
     {
+      
+      title: "EKIP_Project",
+      description: "EKIP_Project is a full‑stack application that pairs a Python-based backend (APIs, business logic, and data processing) with a TypeScript frontend (client UI and interactions). The repo emphasizes server- and client-side development, making it suitable for web deployments, containerization, and automated CI/CD.",
+      technologies: ["Python","TypeScript","React (TypeScript)","FastAPI / Django (Python web framework)","Docker","PostgreSQL / SQLite","GitHub Actions"],
+      githubUrl: "https://github.com/sukesh-006/EKIP_Project",
+      liveUrl: "#",
+      date: "2026",
+      status: "Completed",
+      visual: (
+        <svg className="w-full h-full bg-slate-900 rounded-2xl border border-slate-800 p-4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          {/* Heart rate / Outbreak spikes graph */}
+          <path d="M 10 90 L 40 90 L 55 20 L 70 100 L 85 90 L 115 90 L 130 40 L 145 105 L 160 90 L 190 90" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" />
+          <path d="M 10 90 L 40 90 L 55 20 L 70 100 L 85 90 L 115 90 L 130 40 L 145 105 L 160 90 L 190 90 L 190 120 L 10 120 Z" fill="url(#grad)" opacity="0.1" />
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#10b981" />
+              <stop offset="100%" stopColor="transparent" />
+            </linearGradient>
+          </defs>
+          <circle cx="55" cy="20" r="4" fill="#f43f5e" />
+          <text x="65" y="22" fill="#f43f5e" fontSize="7" fontWeight="bold">Outbreak Spike Detected</text>
+          
+          <circle cx="130" cy="40" r="3" fill="#06b6d4" />
+        </svg>
+      )
+    },
+    {
       title: "AI Personal Finance Advisor",
       description: "A full-stack web application for tracking income, expenses, savings goals, and budgets. Features AI-powered financial recommendations, predictive trend analysis, and a smart chatbot.",
       technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "PostgreSQL", "Docker"],
@@ -100,61 +127,6 @@ const ProjectsSection = () => {
       )
     },
     {
-      title: "Predictive Healthcare Analytics Platform",
-      description: "Built an end-to-end predictive healthcare framework capable of predicting outbreak vectors and general patient readmission frequencies using ensemble learners and Kafka real-time streaming architectures.",
-      technologies: ["Scikit-learn", "Apache Kafka", "React", "PostgreSQL", "Docker"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
-      status: "Completed",
-      visual: (
-        <svg className="w-full h-full bg-slate-900 rounded-2xl border border-slate-800 p-4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          {/* Heart rate / Outbreak spikes graph */}
-          <path d="M 10 90 L 40 90 L 55 20 L 70 100 L 85 90 L 115 90 L 130 40 L 145 105 L 160 90 L 190 90" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" />
-          <path d="M 10 90 L 40 90 L 55 20 L 70 100 L 85 90 L 115 90 L 130 40 L 145 105 L 160 90 L 190 90 L 190 120 L 10 120 Z" fill="url(#grad)" opacity="0.1" />
-          <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#10b981" />
-              <stop offset="100%" stopColor="transparent" />
-            </linearGradient>
-          </defs>
-          <circle cx="55" cy="20" r="4" fill="#f43f5e" />
-          <text x="65" y="22" fill="#f43f5e" fontSize="7" fontWeight="bold">Outbreak Spike Detected</text>
-          
-          <circle cx="130" cy="40" r="3" fill="#06b6d4" />
-        </svg>
-      )
-    },
-    {
-      title: "Automated Code Review Assistant",
-      description: "Developing an AI-driven coding assistant that parses Abstract Syntax Trees (AST) of programs, targeting and resolving vulnerabilities and logical defects prior to product deployment.",
-      technologies: ["AST", "Machine Learning", "Python", "Git", "CI/CD"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2025",
-      status: "In Progress",
-      visual: (
-        <svg className="w-full h-full bg-slate-900 rounded-2xl border border-slate-800 p-4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          {/* Syntax tree blocks */}
-          <rect x="75" y="15" width="50" height="15" rx="3" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" strokeWidth="1" />
-          <text x="86" y="25" fill="#6366f1" fontSize="7" fontWeight="bold" fontFamily="monospace">Root Node</text>
-
-          <line x1="100" y1="30" x2="60" y2="55" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-          <line x1="100" y1="30" x2="140" y2="55" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-
-          <rect x="35" y="55" width="50" height="15" rx="3" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="1" />
-          <text x="44" y="65" fill="#10b981" fontSize="7" fontFamily="monospace">FuncDecl (OK)</text>
-
-          <rect x="115" y="55" width="50" height="15" rx="3" fill="rgba(244, 63, 94, 0.2)" stroke="#f43f5e" strokeWidth="1" />
-          <text x="123" y="65" fill="#f43f5e" fontSize="7" fontFamily="monospace">Leak (Fix)</text>
-          
-          <path d="M 140 70 L 140 90 L 100 90" fill="none" stroke="#f43f5e" strokeWidth="1" strokeDasharray="3" />
-          <circle cx="100" cy="90" r="3" fill="#f43f5e" />
-          <text x="40" y="102" fill="#cbd5e1" fontSize="7">Vulnerability flagged at Line 42</text>
-        </svg>
-      )
-    },
-    {
       title: "Real-time Object Detection for Autonomous Vehicles",
       description: "Created a real-time object tracking and classifier layout optimized for edge deployments, leveraging OpenCV and YOLO architectures to reach 95% accuracy running on resource-constrained boards.",
       technologies: ["PyTorch", "OpenCV", "CUDA", "TensorRT", "ROS"],
@@ -176,6 +148,35 @@ const ProjectsSection = () => {
           <line x1="20" y1="90" x2="180" y2="90" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
           <circle cx="90" cy="40" r="2" fill="#f43f5e" />
           <text x="96" y="42" fill="#f43f5e" fontSize="6">Traffic Light (Red)</text>
+        </svg>
+      )
+    },
+    {
+      title: "Automated Code Review Assistant",
+      description: "Developing an AI-driven coding assistant that parses Abstract Syntax Trees (AST) of programs, targeting and resolving vulnerabilities and logical defects prior to product deployment.",
+      technologies: ["AST", "Machine Learning", "Python", "Git", "CI/CD"],
+      githubUrl: "#",
+      liveUrl: "#",
+      date: "2026",
+      status: "In Progress",
+      visual: (
+        <svg className="w-full h-full bg-slate-900 rounded-2xl border border-slate-800 p-4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          {/* Syntax tree blocks */}
+          <rect x="75" y="15" width="50" height="15" rx="3" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" strokeWidth="1" />
+          <text x="86" y="25" fill="#6366f1" fontSize="7" fontWeight="bold" fontFamily="monospace">Root Node</text>
+
+          <line x1="100" y1="30" x2="60" y2="55" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+          <line x1="100" y1="30" x2="140" y2="55" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+
+          <rect x="35" y="55" width="50" height="15" rx="3" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="1" />
+          <text x="44" y="65" fill="#10b981" fontSize="7" fontFamily="monospace">FuncDecl (OK)</text>
+
+          <rect x="115" y="55" width="50" height="15" rx="3" fill="rgba(244, 63, 94, 0.2)" stroke="#f43f5e" strokeWidth="1" />
+          <text x="123" y="65" fill="#f43f5e" fontSize="7" fontFamily="monospace">Leak (Fix)</text>
+          
+          <path d="M 140 70 L 140 90 L 100 90" fill="none" stroke="#f43f5e" strokeWidth="1" strokeDasharray="3" />
+          <circle cx="100" cy="90" r="3" fill="#f43f5e" />
+          <text x="40" y="102" fill="#cbd5e1" fontSize="7">Vulnerability flagged at Line 42</text>
         </svg>
       )
     }
