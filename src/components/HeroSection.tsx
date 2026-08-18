@@ -139,7 +139,7 @@ const HeroSection = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = "https://drive.google.com/file/d/1lDSgC9zco5j96lUFcJB1oR4KZGHSBdbs/view?usp=sharing";
+    link.href = "https://drive.google.com/file/d/1pYsdDCiqmxClS1quY0-HL1fTp7fTHnI7/view?usp=sharing";
     link.target = "_blank";
     link.download = 'R_SUKESH_Resume.pdf';
     link.click();
