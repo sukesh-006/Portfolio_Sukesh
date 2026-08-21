@@ -188,6 +188,35 @@ const CoursesSection = () => {
           </div>
         </div>
 
+        {/* Achievements Section */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-white mb-10 flex items-center gap-2">
+            <Sparkles className="text-amber-400 w-6 h-6" />
+            Key Achievements
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => (
+              <Card 
+                key={index} 
+                className="bg-slate-900/60 backdrop-blur-md border border-slate-800/80 shadow-soft hover:shadow-medium hover:border-amber-500/20 hover:-translate-y-1 transition-smooth group"
+              >
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-bold text-white group-hover:text-amber-400 transition-smooth leading-snug mb-2">
+                    {achievement.title}
+                  </h4>
+                  <div className="flex justify-between items-center text-xs text-slate-400">
+                    <span className="font-medium">{achievement.event}</span>
+                    <Badge variant="outline" className="border-slate-800/80 text-slate-300">
+                      {achievement.year}
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* 2. Ongoing Courses: Ribbon cards */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-10 flex items-center gap-2">
