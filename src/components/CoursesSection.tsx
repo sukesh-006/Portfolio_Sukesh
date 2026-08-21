@@ -4,6 +4,34 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 
 const CoursesSection = () => {
+  const achievements = [
+    {
+      title: "1st Prize, Web Development Symposium",
+      event: "VYUGA 2K26",
+      year: "2026",
+    },
+    {
+      title: "BIO-VERIFAI — Real-Time rPPG-Based Liveness Detection",
+      event: "ICACT Conference",
+      year: "2026",
+    },
+    {
+      title: "AI-Powered Predictive Model for Lung Disease Detection using Chest X-Rays",
+      event: "IEEE Conference",
+      year: "2025",
+    },
+    {
+      title: "2nd Prize, AI in Cybersecurity & Threat Detection",
+      event: "NCRPAIDST",
+      year: "2025",
+    },
+    {
+      title: "AI-Based Rockfall Prediction & Alert System for Open-Pit Mines",
+      event: "Smart India Hackathon, VSBCETC",
+      year: "2025",
+    }
+  ];
+
   const certifications = [
     {
       title: "Introduction to Artificial Intelligence",
@@ -99,7 +127,7 @@ const CoursesSection = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 border border-cyan-800/40 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.1)]">
-            CERTIFICATIONS
+            ACHIEVEMENTS & CERTIFICATIONS
           </span>
           <h2 className="text-4xl font-extrabold text-white sm:text-5xl">Professional Credentials</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
