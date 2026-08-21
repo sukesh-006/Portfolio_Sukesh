@@ -11,17 +11,7 @@ import { Button } from '@/components/ui/button';
 const PublicationsSection = () => {
   const journals = [
     {
-      title: "Aegis AI - Intelligent Cyber Resilience",
-      authors: "R SUKESH, et al.",
-      journal: "International Journal of Scientific Research in Engineering and Management (IJSREM)",
-      year: "2025",
-      status: "Published",
-      doi: "doi.org/10.55041/ijsrem42978",
-      volume: "Volume 09, Issue 02",
-      abstract: "Aegis AI (AAI): Intelligent Cyber Resilience presents a cutting-edge approach that integrates artificial intelligence (AI) and machine learning (ML) to strengthen cybersecurity defenses by detecting intrusion signals and automating defensive responses in real-time."
-    },
-    {
-      title: "A Temporal-Aware Dynamic Graph Neural Network for Learning Evolving Graph Representations",
+      title: "Temporal-Aware Dynamic Graph Neural Network for Evolving Graph Representations",
       authors: "R SUKESH, et al.",
       journal: "IRO Journal on Sustainable Wireless Systems (IROSWS)",
       year: "2026",
@@ -29,6 +19,26 @@ const PublicationsSection = () => {
       doi: "doi.org/10.36548/jsws.2025.4.002",
       volume: "Volume 07, Issue 04",
       abstract: "Standard Graph Neural Networks (GNNs) are mainly designed for static network architectures. This study proposes a temporal-aware dynamic neural graph modeling system that captures continuous structural updates and edge weights changes in knowledge graphs."
+    },
+    {
+      title: "Aegis AI - Intelligent Cyber Resilience",
+      authors: "R SUKESH, et al.",
+      journal: "International Journal of Scientific Research in Engineering and Management (IJSREM)",
+      year: "2025",
+      status: "Published",
+      doi: "doi.org/10.55041/ijsrem42978",
+      volume: "Volume 09, Issue 03",
+      abstract: "Aegis AI (AAI): Intelligent Cyber Resilience presents a cutting-edge approach that integrates artificial intelligence (AI) and machine learning (ML) to strengthen cybersecurity defenses by detecting intrusion signals and automating defensive responses in real-time."
+    },
+    {
+      title: "Hybrid Spatio-Temporal Graph Attention & Transformer Networks for Probabilistic Earthquake Prediction",
+      authors: "R SUKESH, et al.",
+      journal: "Asia Pacific Journal of Science and Technology",
+      year: "2026",
+      status: "Under Review",
+      doi: "",
+      volume: "",
+      abstract: ""
     }
   ];
 
@@ -36,21 +46,30 @@ const PublicationsSection = () => {
     {
       title: "Teaching Methods for AI-Driven HR Practices",
       book: "Emerging Technologies for Recruitment Strategy and Practice",
-      publisher: "IGI GLOBAL Scientific Publishing",
+      publisher: "IGI Global",
       year: "2025",
       status: "Published",
       isbn: "978-3-030-12345-6",
       chapter: "Chapter 5",
       pages: "113-146"
+    },
+    {
+      title: "Societal Impact of Autonomous Surgical Robotics – Ethics, Accessibility & Future of Healthcare",
+      book: "Healthcare Technologies",
+      publisher: "IGI Global",
+      year: "2025",
+      status: "Published",
+      isbn: "",
+      chapter: "",
+      pages: ""
     }
-    
   ];
 
   const patent = {
     title: "Aegis AI - Intelligent Cyber Resilience Framework",
     patentNumber: "IN Patent Application 202541034212 A",
     status: "Granted",
-    year: "2025",
+    year: "Apr 2025",
     inventors: "R Sukesh",
     description: "Aegis AI is an advanced AI-driven cybersecurity framework designed to enhance enterprise cyber resilience by integrating intelligent threat detection, automated incident responses, and adaptive learning layers."
   };
