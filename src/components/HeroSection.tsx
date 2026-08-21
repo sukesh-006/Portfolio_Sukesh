@@ -184,7 +184,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg sm:text-2xl text-slate-300 font-medium max-w-2xl mx-auto mb-6">
-          Transforming Data into Intelligence & Concepts into Functional Solutions
+          "Building intelligent, data-centric solutions — one model at a time."
         </p>
 
         <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -215,7 +215,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-8">
           <div className="flex gap-6">
             <a
-              href="https://github.com/sukesh-006"
+              href="https://github.com/sukesh-r-aids"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"

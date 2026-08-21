@@ -40,7 +40,7 @@ const AboutSection = () => {
               </div>
 
               <h4 className="text-2xl font-bold text-white mb-1">R SUKESH</h4>
-              <p className="text-cyan-400 text-sm font-medium mb-4">AI & Data Science Specialist</p>
+              <p className="text-cyan-400 text-sm font-medium mb-4">AI & Data Science Undergraduate</p>
 
               {/* Mini Info List */}
               <div className="w-full space-y-3 text-left border-t border-slate-800/80 pt-4 text-sm text-slate-300">
@@ -50,11 +50,11 @@ const AboutSection = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="text-indigo-400 w-4 h-4 flex-shrink-0" />
-                  <span>B.Tech AI & Data Science (CGPA: 8.5)</span>
+                  <span className="leading-tight">B.Tech AI & Data Science (2023–Present)<br/>VSB College of Engineering Technical Campus<br/>CGPA: 8.42</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="text-indigo-400 w-4 h-4 flex-shrink-0" />
-                  <span>Patent Holder & Published Researcher</span>
+                  <span className="leading-tight">Fun fact: Published researcher & patent holder while still an undergrad</span>
                 </div>
               </div>
             </div>
@@ -98,6 +98,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Today, I strive to merge technical implementation with academic depth. 
+                <strong>Currently exploring:</strong> Agentic Workflows, Production-Grade Model Serving, and Computer Vision. 
                 I am actively seeking software development and data science internship opportunities where I can apply ML pipelines, frontend craft, and full-stack solutions to industry-scale problems.
               </p>
             </div>
@@ -109,7 +110,7 @@ const AboutSection = () => {
                 <span className="text-xs uppercase text-slate-400 tracking-wider">Expected Graduation</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold text-white">8.5 / 10.0</span>
+                <span className="block text-2xl font-bold text-white">8.42 / 10.0</span>
                 <span className="text-xs uppercase text-slate-400 tracking-wider">Current CGPA Status</span>
               </div>
             </div>
