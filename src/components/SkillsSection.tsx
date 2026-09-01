@@ -1,6 +1,7 @@
-import { Brain, Database, Code, BarChart3, Users, MessageSquare, ShieldAlert, Target, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Brain, Code, BarChart3, Users, MessageSquare, ShieldAlert, Target, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import Reveal from '@/components/Reveal';
 
 interface RadialChartProps {
   percentage: number;
@@ -15,21 +16,15 @@ const RadialChart = ({ percentage, label, color, icon }: RadialChartProps) => {
   const strokeDashoffset = strokeDasharray - (percentage / 100) * strokeDasharray;
 
   return (
-    <div className="flex flex-col items-center p-4 bg-slate-900/60 border border-slate-800 rounded-2xl shadow-soft group hover:border-cyan-500/30 transition-smooth">
-      <div className="relative w-24 h-24 mb-3 flex items-center justify-center">
-        <svg className="w-full h-full transform -rotate-90">
+    <div className="flex flex-col items-center rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-[0_15px_40px_rgba(15,23,42,0.22)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30">
+      <div className="relative mb-3 flex h-24 w-24 items-center justify-center">
+        <svg className="h-full w-full -rotate-90">
+          <circle cx="48" cy="48" r={radius} className="fill-none stroke-slate-800" strokeWidth="6" />
           <circle
             cx="48"
             cy="48"
             r={radius}
-            className="stroke-slate-800 fill-none"
-            strokeWidth="6"
-          />
-          <circle
-            cx="48"
-            cy="48"
-            r={radius}
-            className="fill-none transition-smooth"
+            className="fill-none transition-all duration-500"
             strokeWidth="6"
             stroke={color}
             strokeDasharray={strokeDasharray}
@@ -38,157 +33,133 @@ const RadialChart = ({ percentage, label, color, icon }: RadialChartProps) => {
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-300">
-          <div className="text-slate-400 group-hover:text-white transition-smooth">{icon}</div>
-          <span className="text-xs font-bold mt-1 text-slate-100">{percentage}%</span>
+          <div className="text-slate-400">{icon}</div>
+          <span className="mt-1 text-xs font-bold text-slate-100">{percentage}%</span>
         </div>
       </div>
-      <span className="text-sm font-semibold text-slate-300 group-hover:text-cyan-400 transition-smooth">{label}</span>
+      <span className="text-sm font-semibold text-slate-300">{label}</span>
     </div>
   );
 };
 
 const SkillsSection = () => {
   const primaryRadialSkills = [
-    { label: "Machine Learning", percentage: 90, color: "#06b6d4", icon: <Brain className="w-5 h-5" /> },
-    { label: "Data Analytics", percentage: 85, color: "#6366f1", icon: <BarChart3 className="w-5 h-5" /> },
-    { label: "Full-Stack Web Dev", percentage: 80, color: "#a855f7", icon: <Code className="w-5 h-5" /> },
-    { label: "Cybersecurity (AI)", percentage: 85, color: "#ec4899", icon: <ShieldAlert className="w-5 h-5" /> },
+    { label: 'Machine Learning', percentage: 90, color: '#06b6d4', icon: <Brain className="h-5 w-5" /> },
+    { label: 'Data Analytics', percentage: 85, color: '#6366f1', icon: <BarChart3 className="h-5 w-5" /> },
+    { label: 'Full-Stack Web Dev', percentage: 80, color: '#a855f7', icon: <Code className="h-5 w-5" /> },
+    { label: 'Cybersecurity (AI)', percentage: 85, color: '#ec4899', icon: <ShieldAlert className="h-5 w-5" /> },
   ];
 
   const technicalProgressSkills = [
-    { name: "Python & TensorFlow / PyTorch", progress: 90 },
-    { name: "SQL & Relational Databases", progress: 85 },
-    { name: "Java & Object Oriented Design", progress: 75 },
-    { name: "Git, Version Control & MLOps", progress: 80 },
+    { name: 'Python & TensorFlow / PyTorch', progress: 90 },
+    { name: 'SQL & Relational Databases', progress: 85 },
+    { name: 'Java & Object Oriented Design', progress: 75 },
+    { name: 'Git, Version Control & MLOps', progress: 80 },
   ];
 
   const softSkills = [
     {
-      title: "Technical Communication",
-      icon: <MessageSquare className="w-6 h-6 text-cyan-400" />,
-      description: "Proven record in authoring research papers, book chapters, and presenting complex AI paradigms at academic conferences."
+      title: 'Technical Communication',
+      icon: <MessageSquare className="h-6 w-6 text-cyan-400" />,
+      description: 'Proven record in authoring research papers, book chapters, and presenting complex AI paradigms at academic conferences.',
     },
     {
-      title: "Team Collaboration & Hackathons",
-      icon: <Users className="w-6 h-6 text-indigo-400" />,
-      description: "Active contributor in multi-disciplinary project teams, merging machine learning codebases with responsive frontend dashboards."
+      title: 'Team Collaboration & Hackathons',
+      icon: <Users className="h-6 w-6 text-indigo-400" />,
+      description: 'Active contributor in multidisciplinary project teams, merging machine learning codebases with responsive frontend dashboards.',
     },
     {
-      title: "Problem Solving & Research Leadership",
-      icon: <Sparkles className="w-6 h-6 text-purple-400" />,
-      description: "Self-driven patent innovator. Designing custom Aegis AI cybersecurity blueprints and solving resource-constrained learning tasks."
-    }
+      title: 'Problem Solving & Research Leadership',
+      icon: <Sparkles className="h-6 w-6 text-purple-400" />,
+      description: 'Self-driven patent innovator designing custom Aegis AI cybersecurity blueprints and solving resource-constrained learning tasks.',
+    },
   ];
 
   return (
-    <section id="skills" className="py-24 bg-slate-900 border-t border-b border-slate-800 text-slate-100 font-sans relative">
-      <div className="absolute inset-0 bg-dark-grid opacity-30 pointer-events-none" />
-      
-      {/* Decorative neon ambient blur */}
-      <div className="absolute top-1/3 right-10 w-80 h-80 rounded-full bg-cyan-500/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-10 w-80 h-80 rounded-full bg-indigo-500/5 blur-[100px] pointer-events-none" />
+    <section id="skills" className="relative overflow-hidden border-y border-slate-800 bg-slate-950 py-24 text-slate-100 font-sans">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.08),transparent_22%),radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.12),transparent_28%)]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-widest mb-3">EXPERTISE</h2>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mb-16 text-center">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.28rem] text-cyan-400">EXPERTISE</h2>
           <h3 className="text-4xl font-extrabold text-white sm:text-5xl">Skills & Competencies</h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
-        </div>
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500" />
+        </Reveal>
 
-        {/* Section Split: Left is Technical Skills, Right is Career Vision & Soft Skills */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Left Column (8/12 on large screen): Technical Skills */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="bg-slate-950/40 backdrop-blur-md border border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-strong">
-              <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                Technical Mastery
-                <span className="w-8 h-[2px] bg-cyan-400 rounded-full"></span>
-              </h4>
-              
-              {/* Radial Skills Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-7" delay={80}>
+            <div className="rounded-[30px] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.28)] md:p-8">
+              <div className="mb-6 flex items-center gap-3">
+                <h4 className="text-xl font-bold text-white">Technical Mastery</h4>
+                <span className="h-px flex-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-transparent" />
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 {primaryRadialSkills.map((skill, index) => (
-                  <RadialChart
-                    key={index}
-                    percentage={skill.percentage}
-                    label={skill.label}
-                    color={skill.color}
-                    icon={skill.icon}
-                  />
+                  <Reveal key={index} delay={index * 80} className="h-full">
+                    <RadialChart
+                      percentage={skill.percentage}
+                      label={skill.label}
+                      color={skill.color}
+                      icon={skill.icon}
+                    />
+                  </Reveal>
                 ))}
               </div>
 
-              {/* Progress Bars */}
-              <div className="space-y-5">
+              <div className="mt-8 space-y-5">
                 {technicalProgressSkills.map((skill, index) => (
                   <div key={index} className="space-y-2">
-                    <div className="flex justify-between items-center text-sm">
-                      <span className="text-slate-300 font-medium">{skill.name}</span>
-                      <span className="text-cyan-400 font-bold">{skill.progress}%</span>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="font-medium text-slate-300">{skill.name}</span>
+                      <span className="font-bold text-cyan-400">{skill.progress}%</span>
                     </div>
                     <Progress value={skill.progress} className="h-2 bg-slate-800" />
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          {/* Right Column (5/12 on large screen): HR Core & Vision */}
-          <div className="lg:col-span-5 space-y-8">
-            
-            {/* Career Goals / Vision Card */}
-            <Card className="bg-gradient-to-br from-indigo-950/60 to-slate-950/60 backdrop-blur-md border border-indigo-500/20 rounded-3xl shadow-strong overflow-hidden relative group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl" />
-              <CardContent className="p-6 md:p-8 relative z-10">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-indigo-400" />
-                  Career Vision
-                </h4>
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  "To engineer scalable Artificial Intelligence systems and high-throughput data processing models that enhance cyber resilience, secure computing environments, and empower decisions."
-                </p>
-                <div className="flex flex-col gap-2 text-xs text-slate-400 font-medium">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                    <span>Focus on secure machine learning applications</span>
+          <Reveal className="lg:col-span-5" delay={120}>
+            <div className="space-y-8">
+              <Card className="relative overflow-hidden rounded-[28px] border border-indigo-500/20 bg-gradient-to-br from-indigo-950/70 via-slate-900 to-slate-950 shadow-[0_30px_70px_rgba(79,70,229,0.18)]">
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-indigo-500/10 blur-2xl" />
+                <CardContent className="relative z-10 p-6 md:p-8">
+                  <h4 className="mb-4 flex items-center gap-2 text-xl font-bold text-white">
+                    <Target className="h-5 w-5 text-indigo-400" />
+                    Career Vision
+                  </h4>
+                  <p className="mb-4 text-sm leading-relaxed text-slate-300">
+                    “To engineer scalable Artificial Intelligence systems and high-throughput data processing models that enhance cyber resilience, secure computing environments, and empower decisions.”
+                  </p>
+                  <div className="space-y-2 text-xs font-medium text-slate-400">
+                    <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-cyan-400" />Secure machine learning systems</div>
+                    <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-cyan-400" />Research-led product engineering</div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                    <span>Aspiring full-stack engineer and researcher</span>
-                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="rounded-[28px] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_25px_70px_rgba(15,23,42,0.2)] md:p-8">
+                <div className="mb-6 flex items-center gap-3">
+                  <h4 className="text-xl font-bold text-white">People Skills</h4>
+                  <span className="h-px flex-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-transparent" />
                 </div>
-              </CardContent>
-            </Card>
 
-            {/* Soft Skills Section */}
-            <div className="bg-slate-950/40 backdrop-blur-md border border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-strong">
-              <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                HR Core (Soft Skills)
-                <span className="w-8 h-[2px] bg-cyan-400 rounded-full"></span>
-              </h4>
-
-              <div className="space-y-6">
-                {softSkills.map((skill, index) => (
-                  <div key={index} className="flex gap-4 items-start group">
-                    <div className="p-2.5 bg-slate-900 border border-slate-800 rounded-xl group-hover:border-cyan-500/30 transition-smooth">
-                      {skill.icon}
+                <div className="space-y-6">
+                  {softSkills.map((skill, index) => (
+                    <div key={index} className="flex items-start gap-4 rounded-2xl border border-slate-800 bg-slate-950/50 p-3 transition-colors duration-300 hover:border-cyan-500/20">
+                      <div className="rounded-xl border border-slate-800 bg-slate-900 p-2.5">{skill.icon}</div>
+                      <div>
+                        <h5 className="mb-1 text-sm font-semibold text-slate-200">{skill.title}</h5>
+                        <p className="text-xs leading-relaxed text-slate-400">{skill.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className="text-sm font-semibold text-slate-200 group-hover:text-white transition-smooth mb-1">
-                        {skill.title}
-                      </h5>
-                      <p className="text-xs text-slate-400 leading-relaxed">
-                        {skill.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-
-          </div>
-
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,120 +1,93 @@
-import { Award, GraduationCap, MapPin, Calendar, Heart } from 'lucide-react';
+import { Award, GraduationCap, MapPin, Heart } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.png';
+import Reveal from '@/components/Reveal';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-slate-100 relative overflow-hidden font-sans">
-      {/* Decorative vector background */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+    <section id="about" className="py-24 bg-slate-950 text-slate-100 relative overflow-hidden font-sans">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(99,102,241,0.12),transparent_30%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-widest mb-3">WHO I AM</h2>
+        <Reveal className="text-center mb-16">
+          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-[0.28rem] mb-3">WHO I AM</h2>
           <h3 className="text-4xl font-extrabold text-white sm:text-5xl">About Me</h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
-        </div>
+          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500 mx-auto mt-4 rounded-full" />
+        </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          {/* Left Column: Portrait & Highlight Quote Card (Split component 1) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-            {/* Visual Portrait Card */}
-            <div className="bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-3xl p-6 shadow-strong flex flex-col items-center text-center relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl pointer-events-none" />
-
-              <div className="w-40 h-40 rounded-2xl overflow-hidden border-2 border-indigo-500/30 mb-6 relative z-10 shadow-medium">
-                <img
-                  src={profilePhoto}
-                  alt="R Sukesh Portrait"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
-                />
-              </div>
-
-              <h4 className="text-2xl font-bold text-white mb-1">R SUKESH</h4>
-              <p className="text-cyan-400 text-sm font-medium mb-4">AI & Data Science Undergraduate</p>
-
-              {/* Mini Info List */}
-              <div className="w-full space-y-3 text-left border-t border-slate-800/80 pt-4 text-sm text-slate-300">
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-indigo-400 w-4 h-4 flex-shrink-0" />
-                  <span>Coimbatore, Tamil Nadu, India</span>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1.5fr] gap-8 lg:gap-10 items-stretch">
+          <Reveal className="space-y-6" delay={80}>
+            <div className="rounded-[28px] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.45)] hover:border-cyan-500/30 transition-colors duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-cyan-500/50 via-indigo-500/40 to-purple-500/50 blur-xl" />
+                  <div className="relative w-44 h-44 sm:w-52 sm:h-52 overflow-hidden rounded-[30px] border border-indigo-500/30 bg-slate-900 shadow-[0_20px_50px_rgba(79,70,229,0.28)]">
+                    <img src={profilePhoto} alt="R Sukesh Portrait" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <GraduationCap className="text-indigo-400 w-4 h-4 flex-shrink-0" />
-                  <span className="leading-tight">B.Tech AI & Data Science (2023–Present)<br/>VSB College of Engineering Technical Campus<br/>CGPA: 8.42</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Award className="text-indigo-400 w-4 h-4 flex-shrink-0" />
-                  <span className="leading-tight">Fun fact: Published researcher & patent holder while still an undergrad</span>
+
+                <h4 className="text-2xl font-bold text-white">R SUKESH</h4>
+                <p className="mt-2 text-sm font-medium text-cyan-300">AI & Data Science Undergraduate</p>
+
+                <div className="mt-6 w-full space-y-3 border-t border-slate-800 pt-4 text-left text-sm text-slate-300">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 h-4 w-4 text-indigo-400" />
+                    <span>Coimbatore, Tamil Nadu, India</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <GraduationCap className="mt-0.5 h-4 w-4 text-indigo-400" />
+                    <span className="leading-relaxed">B.Tech AI & Data Science (2023–Present) · VSB College of Engineering Technical Campus · CGPA: 8.42</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Award className="mt-0.5 h-4 w-4 text-indigo-400" />
+                    <span>Published researcher and patent holder while still an undergrad</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Highlight Quote Card */}
-            <div className="bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-950 border border-indigo-500/20 rounded-3xl p-6 shadow-strong relative overflow-hidden group hover:border-cyan-500/30 transition-smooth">
-              <div className="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none" />
-              <span className="text-6xl text-indigo-500/20 font-serif absolute top-2 left-4 pointer-events-none">“</span>
-              <div className="relative z-10">
-                <p className="text-lg italic text-slate-200 leading-relaxed font-medium mb-4">
-                  "Every challenge is an opportunity to learn, every project is a step forward, and every innovation begins with curiosity."
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400">— Personal Motto</span>
-                  <Heart className="w-4 h-4 text-rose-400 animate-pulse fill-rose-400" />
-                </div>
+            <div className="rounded-[28px] border border-indigo-500/20 bg-gradient-to-br from-indigo-950/70 via-slate-900 to-slate-950 p-6 shadow-[0_25px_70px_rgba(79,70,229,0.18)]">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-[0.22rem] text-cyan-300">Personal Motto</span>
+                <Heart className="h-4 w-4 text-rose-400 animate-pulse fill-rose-400" />
               </div>
+              <p className="mt-4 text-lg italic leading-relaxed text-slate-200">
+                “Every challenge is an opportunity to learn, every project is a step forward, and every innovation begins with curiosity.”
+              </p>
             </div>
-          </div>
+          </Reveal>
 
-          {/* Right Column: Detailed Text (Split component 2) */}
-          <div className="lg:col-span-7 flex flex-col justify-center bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-3xl p-8 lg:p-10 shadow-strong">
-            <h4 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              My Journey
-              <span className="w-8 h-[2px] bg-cyan-400 rounded-full"></span>
-            </h4>
+          <Reveal className="rounded-[30px] border border-slate-800 bg-slate-900/70 p-8 shadow-[0_25px_80px_rgba(15,23,42,0.32)] lg:p-10" delay={120}>
+            <div className="mb-6 flex items-center gap-3">
+              <h4 className="text-2xl font-bold text-white">My Journey</h4>
+              <span className="h-px flex-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-transparent" />
+            </div>
 
-            <div className="space-y-6 text-slate-300 text-base leading-relaxed">
+            <div className="space-y-5 text-base leading-relaxed text-slate-300">
               <p>
-                My venture into technology sparked from a profound curiosity regarding machine behavior and decision-making systems. 
-                As I dived into programming, I found my niche in **Artificial Intelligence and Data Science**—domains with the capability to transform traditional paradigms and empower human decisions through data.
+                My venture into technology sparked from a profound curiosity regarding machine behavior and decision-making systems. As I dived into programming, I found my niche in <span className="font-semibold text-cyan-300">Artificial Intelligence and Data Science</span>—domains with the capability to transform traditional paradigms and empower human decisions through data.
               </p>
               <p>
-                Starting as a learner eager to expand my boundaries, I consolidated my expertise in <span className="text-cyan-300 font-semibold">Python, Java, and SQL</span> while mastering data analysis pipeline structures, machine learning algorithms, and deep neural architectures. 
-                I treat every technical challenge as an opportunity to build robust logic and build clean, scalable web interfaces.
+                Starting as a learner eager to expand my boundaries, I consolidated my expertise in Python, Java, and SQL while mastering data analysis pipelines, machine learning algorithms, and deep neural architectures. I treat every technical challenge as an opportunity to build robust logic and craft clean, scalable web interfaces.
               </p>
               <p>
-                A primary milestone of my developer journey has been research and development. 
-                I am proud to have secured a **granted patent for Aegis AI**, an advanced AI-based cyber resilience framework. 
-                Additionally, I have authored research papers in indexed journals and book chapters, focusing on deep learning applications in healthcare, intelligent graph networks, and eco-sustainability monitoring.
+                A primary milestone has been research and development. I am proud to have secured a granted patent for <span className="font-semibold text-indigo-300">Aegis AI</span>, an advanced AI-based cyber resilience framework. I have also authored research papers and book chapters focused on deep learning applications in healthcare, intelligent graph networks, and eco-sustainability monitoring.
               </p>
               <p>
-                Today, I strive to merge technical implementation with academic depth. 
-                <strong>Currently exploring:</strong> Agentic Workflows, Production-Grade Model Serving, and Computer Vision. 
-                I am actively seeking software development and data science internship opportunities where I can apply ML pipelines, frontend craft, and full-stack solutions to industry-scale problems.
+                Today, I strive to merge technical implementation with academic depth. I am actively exploring agentic workflows, production-grade model serving, and computer vision while seeking internship opportunities where I can apply ML pipelines, frontend craft, and full-stack solutions to real-world problems.
               </p>
             </div>
 
-            {/* Quick Milestones Grid */}
-            <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-800/80">
-              <div>
-                <span className="block text-2xl font-bold text-white">2027</span>
-                <span className="text-xs uppercase text-slate-400 tracking-wider">Expected Graduation</span>
+            <div className="mt-8 grid gap-4 border-t border-slate-800 pt-6 sm:grid-cols-2">
+              <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
+                <div className="text-2xl font-black text-white">2027</div>
+                <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Expected Graduation</div>
               </div>
-              <div>
-                <span className="block text-2xl font-bold text-white">8.42 / 10.0</span>
-                <span className="text-xs uppercase text-slate-400 tracking-wider">Current CGPA Status</span>
+              <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
+                <div className="text-2xl font-black bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">8.42</div>
+                <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Current CGPA</div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
