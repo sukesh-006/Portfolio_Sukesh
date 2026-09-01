@@ -158,61 +158,60 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-indigo-500/10 blur-[120px] pointer-events-none animate-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-[40vw] h-[40vw] rounded-full bg-cyan-500/10 blur-[120px] pointer-events-none animate-float" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 text-center">
-        {/* Floating, glowing profile pic wrapper */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative group">
-            {/* Spinning/glowing border rings */}
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 opacity-75 blur-md group-hover:opacity-100 transition-smooth duration-700 animate-spin" style={{ animationDuration: '8s' }} />
-            <div className="relative w-44 h-44 rounded-full overflow-hidden border-2 border-slate-900 shadow-strong bg-slate-900">
-              <img
-                src={profilePhoto}
-                alt="Portrait photograph of R Sukesh, AI & Data Science Specialist"
-                className="w-full h-full object-cover transform hover:scale-110 transition-smooth duration-500"
-              />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 text-center">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
+          <div className="order-2 w-full lg:w-1/2 text-center lg:order-1 lg:text-left">
+            <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 border border-cyan-800/40 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+              Final Year AI & Data Science
+            </span>
+
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
+              Hi, I'm <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(56,189,248,0.35)]">R SUKESH</span>
+            </h1>
+
+            <p className="text-lg sm:text-2xl text-slate-300 font-medium max-w-xl lg:max-w-2xl mb-6 lg:mx-0">
+              "Building intelligent, data-centric solutions — one model at a time."
+            </p>
+
+            <p className="text-sm sm:text-base text-slate-400 max-w-xl lg:max-w-2xl mb-10 leading-relaxed lg:mx-0">
+              Aspiring AI & Data Science Engineer specialized in constructing intelligent models, processing dynamic datasets, and delivering scalable full-stack web applications. Bridging the gap between algorithms and real-world impact.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start lg:items-start">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold transition-bounce shadow-[0_4px_20px_rgba(6,182,212,0.25)] hover:shadow-[0_4px_25px_rgba(6,182,212,0.45)]"
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore Projects
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 hover:text-white transition-bounce"
+                onClick={downloadResume}
+              >
+                <Download size={18} className="mr-2" />
+                Get Resume
+              </Button>
+            </div>
+          </div>
+
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+            <div className="relative group">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 opacity-75 blur-md group-hover:opacity-100 transition-smooth duration-700 animate-spin" style={{ animationDuration: '8s' }} />
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-slate-900 shadow-strong bg-slate-900">
+                <img
+                  src={profilePhoto}
+                  alt="Portrait photograph of R Sukesh, AI & Data Science Specialist"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-smooth duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Headings */}
-        <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 border border-cyan-800/40 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-          Final Year AI & Data Science
-        </span>
-
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
-          Hi, I'm <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(56,189,248,0.35)]">R SUKESH</span>
-        </h1>
-
-        <p className="text-lg sm:text-2xl text-slate-300 font-medium max-w-2xl mx-auto mb-6">
-          "Building intelligent, data-centric solutions — one model at a time."
-        </p>
-
-        <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Aspiring AI & Data Science Engineer specialized in constructing intelligent models, processing dynamic datasets, and delivering scalable full-stack web applications. Bridging the gap between algorithms and real-world impact.
-        </p>
-
-        {/* Actions */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <Button
-            size="lg"
-            className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold transition-bounce shadow-[0_4px_20px_rgba(6,182,212,0.25)] hover:shadow-[0_4px_25px_rgba(6,182,212,0.45)]"
-            onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Explore Projects
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="w-full sm:w-auto border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 hover:text-white transition-bounce"
-            onClick={downloadResume}
-          >
-            <Download size={18} className="mr-2" />
-            Get Resume
-          </Button>
-        </div>
-
-        {/* Social Bar & Down Arrow */}
-        <div className="flex flex-col items-center gap-8">
+        <div className="mt-12 flex flex-col items-center gap-8">
           <div className="flex gap-6">
             <a
               href="https://github.com/sukesh-r-aids"
